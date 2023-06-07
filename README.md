@@ -27,7 +27,7 @@ ensure that you can build the firmware without this display module.
 
 Clone this module alongside the MPY sources:
 
-    $ git clone https://github.com/devbis/st7789_mpy.git
+    $ git clone https://github.com/ktalich/st7789_mpy.git
 
 Go to MicroPython ports directory (esp8266, esp32, ...)
 

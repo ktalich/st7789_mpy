@@ -52,7 +52,7 @@
 
 
 STATIC void write_spi(mp_obj_base_t *spi_obj, const uint8_t *buf, int len) {
-    mp_machine_spi_p_t *spi_p = (mp_machine_spi_p_t*)spi_obj->type->protocol;
+    mp_machine_spi_p_t *spi_p = (mp_machine_spi_p_t *)MP_OBJ_TYPE_GET_SLOT(spi_obj->type, protocol);
     spi_p->transfer(spi_obj, len, buf, NULL);
 }
 

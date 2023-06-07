@@ -29,17 +29,17 @@ Clone this module alongside the MPY sources:
 
     $ git clone https://github.com/devbis/st7789_mpy.git
 
-Go to MicroPython ports directory and for ESP8266 run:
+Go to MicroPython ports directory (esp8266, esp32, ...)
 
     $ cd micropython/ports/esp8266
 
-for ESP32:
+Clean the build directory
 
-    $ cd micropython/ports/esp32
+    $ make clean
 
 And then compile the module with specified USER_C_MODULES dir
 
-    $ make USER_C_MODULES=../../../st7789_mpy/ all
+    $ make USER_C_MODULES=../../../st7789_mpy all
 
 
 If you have other user modules, copy the st7789_driver/st7789 to

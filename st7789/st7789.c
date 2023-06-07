@@ -664,4 +664,11 @@ const mp_obj_module_t mp_module_st7789 = {
     .globals = (mp_obj_dict_t*)&mp_module_st7789_globals,
 };
 
-MP_REGISTER_MODULE(MP_QSTR_st7789, mp_module_st7789, MODULE_ST7789_ENABLED);
+// --- Module is enabled by default
+MP_REGISTER_MODULE(MP_QSTR_st7789, mp_module_st7789);
+
+// --- Module can be enabled through a preprocessor configuration option
+// --- In this case the module is enabled by adding CFLAGS_EXTRA=-MODULE_ST7789_ENABLED=1 to the make command
+// #if MODULE_ST7789_ENABLED
+// MP_REGISTER_MODULE(MP_QSTR_st7789, mp_module_st7789);
+// #endif
